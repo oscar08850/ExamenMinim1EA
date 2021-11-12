@@ -1,0 +1,66 @@
+<div>
+    <h2>MODIFICAR UN GRUPO DE INVESTIGACIÓN:</h2>
+    <form [formGroup]="grupoinvestigacionForm" (ngSubmit)="modificargrupo()">
+        <p>
+        
+      Localizacion: <input type="string" placeholder="Localizacion" formControlName="localizacion" />*
+      <ng-container
+        *ngIf="!formControls.localizacion.valid &&formControls.localizacion.touched">
+        <p *ngIf="formControls.localizacion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Fecha: <input type="string" placeholder="Fecha" formControlName="fecha" />*
+      <ng-container
+        *ngIf="!formControls.fecha.valid &&formControls.fecha.touched">
+        <p *ngIf="formControls.fecha.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+  
+    <p>
+      Latitud: <input type="string" placeholder="Latitud" formControlName="latitud" />*
+      <ng-container
+        *ngIf="!formControls.latitud.valid &&formControls.latitud.touched">
+        <p *ngIf="formControls.latitud.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Longitud: <input type="string" placeholder="Longitud" formControlName="longitud" />*
+      <ng-container
+        *ngIf="!formControls.longitud.valid &&formControls.longitud.touched">
+        <p *ngIf="formControls.longitud.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+    <p>
+      Descripción: <input type="string" placeholder="Descripción" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid && formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+
+      <p>
+        <input type="submit" value="Modificar" [disabled]="grupoinvestigacionForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+
+      </p>
+    </form>
+  </div>

@@ -1,0 +1,61 @@
+<div>
+    <h2>MODIFICAR UN GRUPO DE INVESTIGACIÓN:</h2>
+    <form [formGroup]="grupoinvestigacionForm" (ngSubmit)="modificargrupo()">
+        <p>
+        
+      Nombre del Grupo: <input type="string" placeholder="Nombre del Grupo" formControlName="nombregrupo" />*
+      <ng-container
+        *ngIf="!formControls.nombregrupo.valid &&formControls.nombregrupo.touched">
+        <p *ngIf="formControls.nombregrupo.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      ID del grupo: <input type="string" placeholder="ID del grupo" formControlName="id" />*
+      <ng-container
+        *ngIf="!formControls.id.valid &&formControls.id.touched">
+        <p *ngIf="formControls.id.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Descripción: <input type="string" placeholder="descripcion" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid && formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+    <p>
+      Responsable: <input type="string" placeholder="Responsable" formControlName="responsable" />*
+      <ng-container
+        *ngIf="!formControls.responsable.valid &&formControls.responsable.touched">
+        <p *ngIf="formControls.responsable.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Url: <input type="string" placeholder="Url" formControlName="url" />*
+      <ng-container
+        *ngIf="!formControls.url.valid &&formControls.url.touched">
+        <p *ngIf="formControls.url.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+      <p>
+        <input type="submit" value="Eliminar" (click) = "delete()" />
+        <input type="submit" value="Modificar" [disabled]="grupoinvestigacionForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>

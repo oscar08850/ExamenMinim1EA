@@ -1,0 +1,35 @@
+<div class="datos-gruposinvestigacion" *ngIf="grupoinvestigacion">
+    <p>
+        Localizacion: {{grupoinvestigacion.localizacion}}
+    </p>
+
+    <p>
+        Fecha: {{grupoinvestigacion.fecha}}
+    </p>
+
+    <p>
+        Latitud: {{grupoinvestigacion.latitud}}
+    </p>
+
+    <p>
+        Longitud: {{grupoinvestigacion.longitud}}
+    </p>
+
+    <p>
+        Descripcion: {{grupoinvestigacion.descripcion}}
+    </p>
+
+    <p>
+        Nombre Usuario: {{grupoinvestigacion.users.nombre}}
+    </p>
+
+
+     
+
+
+
+    <button (click) = "modificar()">
+        MODIFICAR
+    </button>
+
+</div>

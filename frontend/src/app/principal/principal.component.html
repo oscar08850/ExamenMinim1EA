@@ -1,0 +1,14 @@
+<div class="lista">
+    <h2>LISTA DE GRUPOS DE INVESTIGACION</h2>
+
+    <div>
+        <app-datos-gruposinvestigacion *ngFor="let grupoinvestigacion of grupos"
+            [grupoinvestigacion]="grupoinvestigacion">
+        </app-datos-gruposinvestigacion>
+    </div>
+    
+</div>
+
+<div>
+    <button (click)="nuevoGrupo()" class="button" >Añadir Nuevo Grupo de investigación</button>
+</div>

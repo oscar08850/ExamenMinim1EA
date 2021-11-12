@@ -1,0 +1,83 @@
+<div>
+    <h2>NUEVO EVENTO:</h2>
+    <form [formGroup]="grupoinvestigacionForm" (ngSubmit)="addgrupo()">
+        <p>
+          
+      Nombre del Evento: <input type="string" placeholder="Nombre del Evento" formControlName="localizacion" />*
+      <ng-container
+        *ngIf="!formControls.localizacion.valid &&formControls.localizacion.touched">
+        <p *ngIf="formControls.localizacion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Fecha: <input type="string" placeholder="Fecha" formControlName="fecha" />*
+      <ng-container
+        *ngIf="!formControls.fecha.valid &&formControls.fecha.touched">
+        <p *ngIf="formControls.fecha.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Latitud: <input type="string" placeholder="Latitud" formControlName="latitud" />*
+      <ng-container
+        *ngIf="!formControls.latitud.valid && formControls.latitud.touched">
+        <p *ngIf="formControls.latitud.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+    <p>
+      Longitud: <input type="string" placeholder="Longitud" formControlName="longitud" />*
+      <ng-container
+        *ngIf="!formControls.longitud.valid &&formControls.longitud.touched">
+        <p *ngIf="formControls.longitud.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Descripcion: <input type="string" placeholder="Descripcion" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid &&formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Fiestero: <input type="string" placeholder="Fiestero" formControlName="nombre" />*
+      <ng-container
+        *ngIf="!formControls.nombre.valid &&formControls.nombre.touched">
+        <p *ngIf="formControls.nombre.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+    <p>
+      ID: <input type="string" placeholder="ID" formControlName="id" />*
+      <ng-container
+        *ngIf="!formControls.id.valid &&formControls.id.touched">
+        <p *ngIf="formControls.id.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+      <p>
+        <input type="submit" value="Añadir" [disabled]="grupoinvestigacionForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
+  
