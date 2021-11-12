@@ -18,6 +18,3 @@ Para ejecutar frontend:
 -> ng build
 
 -> ng serve
-
-
-Meri
